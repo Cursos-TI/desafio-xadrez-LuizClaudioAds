@@ -5,12 +5,14 @@
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 int main() {
-    // Nível Novato - Movimentação das Peças
+    // Nível Aventureiro - Mo   vimentação do Cavalo
     // Definindo constantes e estruturas necessárias para o jogo
     const int movimentosTorre = 5;
     const int movimentosBispo = 5;
     const int movimentosRainha = 8; 
-
+    const int cavaloBaixo = 2;
+    const int cavaloEsquerda = 1;
+    
     int contador;
 
     printf("### Bem-vindo ao Jogo de Xadrez! ###\n");
@@ -38,17 +40,22 @@ int main() {
         contador++; 
     } while (contador < movimentosRainha);
 
+    // Movimento do Cavalo: 1 movimento em "L" (2 casas para baixo e 1 para a esquerda).
+    printf("\nMovimento do Cavalo:\n");
+    for (int i = 0; i < cavaloEsquerda; i++) {
+        int j = 0;
+        while (j < cavaloBaixo) {
+            printf("Baixo\n");
+            j++;
+        }
+        printf("Esquerda\n");
+    }
+    
     printf("\n### Fim do Jogo de Xadrez ###\n");
-
-    return 0;
-
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
     // Exemplo: Crie uma função recursiva para o movimento do Bispo.
-
+    
     return 0;
 }
